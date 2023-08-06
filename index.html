@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- *************************         CSS                              ********************************** -->
+    <style>
+        #card-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            
+            
+           
+        }
+        .overflow{
+            max-height: 920px;
+            overflow: hidden
+        }
+
+        .card-text {
+            color: grey;
+            font-size: 0.8rem;
+        }
+
+        .card {
+            padding: 20px;
+        }
+
+        #icon {
+            height: 15px;
+        }
+        #calender{
+            height: 13px;
+            color: gray;
+        }
+
+        .modal-body {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #modal-text {
+            width: 50%;
+            background-color: #fce9e9;
+            padding: 25px;
+            border-radius: 5px 0 0 5px;
+            box-shadow: 0 0 5px #fce9e9;;
+        }
+
+        #modal-img {
+            width: 50%;
+            background-color: rgb(247, 241, 232);
+            padding: 25px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #modal-img img {
+            border-radius: 5px;
+        }
+
+        #cencel-btn {
+            background-color: #EB5757;
+            position: relative;
+            bottom: 23px;
+            left: 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-center mt-2">
+        <h1>AI Universe Hub</h1>
+        <div class="btn  mt-2" style="background-color: #EB5757;font-weight: 600;">Sort By Date</div>
+    </header>
+
+    <main class="container mt-5">
+        <div id="card-group" class="overflow">
+
+
+        </div>
+    </main>
+    <section class="text-center mt-5 mb-5">
+        <div id="showAll-btn" class="btn " style="background-color: #EB5757;font-weight: 600;">
+            Show All
+        </div>
+    </section>
+
+    <section>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            id="cencel-btn"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modal-text">
+
+                        </div>
+                        <div id="modal-img">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
